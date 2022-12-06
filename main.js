@@ -9,7 +9,7 @@ document.getElementById("btn").addEventListener("click", () => {
               var x = event.accelerationIncludingGravity.x;
               var y = event.accelerationIncludingGravity.y;
               var z = event.accelerationIncludingGravity.z;
-              document.getElementById("x").innerText(x);
+              alert(x);
             },
             true
           );
