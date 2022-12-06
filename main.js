@@ -6,10 +6,18 @@ document.getElementById("btn").addEventListener("click", () => {
           window.addEventListener(
             "devicemotion",
             (event) => {
-              var x = event.accelerationIncludingGravity.x;
-              var y = event.accelerationIncludingGravity.y;
-              var z = event.accelerationIncludingGravity.z;
-              alert(x);
+              if (event.accelerationIncludingGravity) {
+                // 加速度を計測する
+                var x = event.accelerationIncludingGravity.x;
+                var y = event.accelerationIncludingGravity.y;
+                var z = event.accelerationIncludingGravity.z;
+                // 画面上に加速度を表示する
+                document.getElementById("x").textContent = x;
+                document.getElementById("y").textContent = y;
+                document.getElementById("z").textContent = z;
+              } else {
+                alert("event.accelerationIncludingGravity is null");
+              }
             },
             true
           );
