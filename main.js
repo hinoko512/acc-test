@@ -6,7 +6,7 @@ function handleMotionEvent(event) {
   var z = event.accelerationIncludingGravity.z;
   document.getElementById("x").innerText(x);
   let text = document.getElementById("text");
-  if (text.textContent === "a") {
+  if (text.textContent === "0") {
     text.innerText = count++;
   }
   // Do something awesome.
